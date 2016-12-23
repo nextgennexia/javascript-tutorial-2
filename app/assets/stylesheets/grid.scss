@@ -1,0 +1,30 @@
+$grid-size: 24;
+$gutter-width: 10px;
+$screen-xs-max: 767px;
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;
+
+.grid-row {
+  width: 100%;
+  &:after { content: ' '; display: table; clear: both; }
+  &.with-gutters > [class^="grid-col-"] { padding: 0 $gutter-width/2; }
+}
+[class^="grid-col-"] { float: left; box-sizing: border-box; }
+
+@mixin grid($i, $type: 'uv') {
+  .grid-col-#{$type}-#{$i} { width: 100% / $grid-size * $i !important; }
+  .grid-col-#{$type}-offset-#{$i} { margin-left: 100% / $grid-size * $i !important; }
+}
+
+@for $i from 1 through $grid-size {
+  @include grid($i);
+}
+
+@each $type in xs max $screen-xs-max, sm min $screen-sm-min, md min $screen-md-min, lg min $screen-lg-min {
+  @media (#{nth($type, 2)}-width: nth($type, 3)) {
+    @for $i from 1 through $grid-size {
+      @include grid($i, nth($type, 1));
+    }
+  }
+}

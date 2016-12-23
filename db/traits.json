@@ -1,0 +1,264 @@
+{
+  "data": [
+    {
+      "id": 0,
+      "name": "Land Rover Range Rover Sport II",
+      "price": "4 800 000",
+      "image": "/public/products/0.jpg",
+      "currency": {
+        "id": "3",
+        "title": "руб.",
+        "code": "RUR",
+        "default": "true"
+      },
+      "traits": []
+    },
+    {
+      "id": 1,
+      "name": "Audi Q7 II",
+      "price": "5 000 000",
+      "image": "/public/products/3.jpg",
+      "currency": {
+        "id": "3",
+        "title": "руб.",
+        "code": "RUR",
+        "default": "true"
+      },
+      "traits": []
+    },
+    {
+      "id": 2,
+      "name": "Land Rover Range Rover Sport II",
+      "price": "4 800 000",
+      "image": "/public/products/0.jpg",
+      "currency": {
+        "id": "3",
+        "title": "руб.",
+        "code": "RUR",
+        "default": "true"
+      },
+      "traits": []
+    },
+    {
+      "id": 3,
+      "name": "Land Rover Range Rover Sport II",
+      "price": "4 800 000",
+      "image": "/public/products/0.jpg",
+      "currency": {
+        "id": "3",
+        "title": "руб.",
+        "code": "RUR",
+        "default": "true"
+      },
+      "traits": []
+    },
+    {
+      "id": 4,
+      "name": "Land Rover Range Rover Sport II",
+      "price": "4 800 000",
+      "image": "/public/products/0.jpg",
+      "currency": {
+        "id": "3",
+        "title": "руб.",
+        "code": "RUR",
+        "default": "true"
+      },
+      "traits": []
+    },
+    {
+      "id": 5,
+      "name": "Land Rover Range Rover Sport II",
+      "price": "4 800 000",
+      "image": "/public/products/0.jpg",
+      "currency": {
+        "id": "3",
+        "title": "руб.",
+        "code": "RUR",
+        "default": "true"
+      },
+      "traits": []
+    },
+    {
+      "id": 6,
+      "name": "Land Rover Range Rover Sport II",
+      "price": "4 800 000",
+      "image": "/public/products/0.jpg",
+      "currency": {
+        "id": "3",
+        "title": "руб.",
+        "code": "RUR",
+        "default": "true"
+      },
+      "traits": []
+    },
+    {
+      "id": 7,
+      "name": "Land Rover Range Rover Sport II",
+      "price": "4 800 000",
+      "image": "/public/products/0.jpg",
+      "currency": {
+        "id": "3",
+        "title": "руб.",
+        "code": "RUR",
+        "default": "true"
+      },
+      "traits": []
+    },
+    {
+      "id": 8,
+      "name": "Land Rover Range Rover Sport II",
+      "price": "4 800 000",
+      "image": "/public/products/0.jpg",
+      "currency": {
+        "id": "3",
+        "title": "руб.",
+        "code": "RUR",
+        "default": "true"
+      },
+      "traits": []
+    },
+    {
+      "id": 9,
+      "name": "Land Rover Range Rover Sport II",
+      "price": "4 800 000",
+      "image": "/public/products/0.jpg",
+      "currency": {
+        "id": "3",
+        "title": "руб.",
+        "code": "RUR",
+        "default": "true"
+      },
+      "traits": []
+    },
+    {
+      "id": 10,
+      "name": "Land Rover Range Rover Sport II",
+      "price": "4 800 000",
+      "image": "/public/products/0.jpg",
+      "currency": {
+        "id": "3",
+        "title": "руб.",
+        "code": "RUR",
+        "default": "true"
+      },
+      "traits": []
+    },
+    {
+      "id": 11,
+      "name": "Land Rover Range Rover Sport II",
+      "price": "4 800 000",
+      "image": "/public/products/0.jpg",
+      "currency": {
+        "id": "3",
+        "title": "руб.",
+        "code": "RUR",
+        "default": "true"
+      },
+      "traits": []
+    },
+    {
+      "id": 12,
+      "name": "Land Rover Range Rover Sport II",
+      "price": "4 800 000",
+      "image": "/public/products/0.jpg",
+      "currency": {
+        "id": "3",
+        "title": "руб.",
+        "code": "RUR",
+        "default": "true"
+      },
+      "traits": []
+    },
+    {
+      "id": 13,
+      "name": "Land Rover Range Rover Sport II",
+      "price": "4 800 000",
+      "image": "/public/products/0.jpg",
+      "currency": {
+        "id": "3",
+        "title": "руб.",
+        "code": "RUR",
+        "default": "true"
+      },
+      "traits": []
+    },
+    {
+      "id": 14,
+      "name": "Land Rover Range Rover Sport II",
+      "price": "4 800 000",
+      "image": "/public/products/0.jpg",
+      "currency": {
+        "id": "3",
+        "title": "руб.",
+        "code": "RUR",
+        "default": "true"
+      },
+      "traits": []
+    },
+    {
+      "id": 15,
+      "name": "Land Rover Range Rover Sport II",
+      "price": "4 800 000",
+      "image": "/public/products/0.jpg",
+      "currency": {
+        "id": "3",
+        "title": "руб.",
+        "code": "RUR",
+        "default": "true"
+      },
+      "traits": []
+    },
+    {
+      "id": 16,
+      "name": "Land Rover Range Rover Sport II",
+      "price": "4 800 000",
+      "image": "/public/products/0.jpg",
+      "currency": {
+        "id": "3",
+        "title": "руб.",
+        "code": "RUR",
+        "default": "true"
+      },
+      "traits": []
+    },
+    {
+      "id": 17,
+      "name": "Land Rover Range Rover Sport II",
+      "price": "4 800 000",
+      "image": "/public/products/0.jpg",
+      "currency": {
+        "id": "3",
+        "title": "руб.",
+        "code": "RUR",
+        "default": "true"
+      },
+      "traits": []
+    },
+    {
+      "id": 18,
+      "name": "Land Rover Range Rover Sport II",
+      "price": "4 800 000",
+      "image": "/public/products/0.jpg",
+      "currency": {
+        "id": "3",
+        "title": "руб.",
+        "code": "RUR",
+        "default": "true"
+      },
+      "traits": []
+    },
+    {
+      "id": 19,
+      "name": "Land Rover Range Rover Sport II",
+      "price": "4 800 000",
+      "image": "/public/products/0.jpg",
+      "currency": {
+        "id": "3",
+        "title": "руб.",
+        "code": "RUR",
+        "default": "true"
+      },
+      "traits": []
+    }
+  ]
+}
