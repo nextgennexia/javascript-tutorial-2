@@ -3,9 +3,10 @@ app.modules.init = ((self) => {
   function _api(data) {
     return $.ajax({
       url: data.url,
-      data: data.data,
+      data: JSON.stringify(data.data),
+      contentType: 'application/json',
       dataType: 'json',
-      type: data.type || 'GET',
+      method: data.method || 'GET',
       beforeSend: data.beforeSend
     });
   }
@@ -21,6 +22,8 @@ app.modules.init = ((self) => {
 
   self.ready = () => {
     _init();
+    _api({url: '/api/products/1', data: {traits: [1,2,3]}, method: 'PUT'}).then((response) => { console.log(response); });
+
   };
 
   return self;
