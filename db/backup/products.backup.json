@@ -11,7 +11,16 @@
         "code": "RUR",
         "default": "true"
       },
-      "traits": []
+      "traits": [
+        {
+          "id": 0,
+          "name": "Цвет",
+          "slug": "color",
+          "values": [
+            {"id": 2, "value": "Зеленый"}
+          ]
+        }
+      ]
     },
     {
       "id": 1,
@@ -24,7 +33,26 @@
         "code": "RUR",
         "default": "true"
       },
-      "traits": []
+      "traits": [
+        {
+          "id": 2,
+          "name": "Объем двигателя",
+          "slug": "engine_capacity",
+          "values": [
+            {"id": 0, "value": "8.4"},
+            {"id": 1, "value": "6"}
+          ]
+        },
+        {
+          "id": 3,
+          "name": "Мощность",
+          "slug": "engine_power",
+          "values": [
+            {"id": 2, "value": "375"},
+            {"id": 3, "value": "300"}
+          ]
+        }
+      ]
     },
     {
       "id": 2,
@@ -37,7 +65,29 @@
         "code": "RUR",
         "default": "true"
       },
-      "traits": []
+      "traits": [
+        {
+          "id": 0,
+          "name": "Цвет",
+          "slug": "color",
+          "values": [
+            {"id": 0, "value": "Красный"},
+            {"id": 1, "value": "Черный"},
+            {"id": 2, "value": "Зеленый"},
+            {"id": 3, "value": "Желтый"},
+            {"id": 4, "value": "Синий"}
+          ]
+        },
+        {
+          "id": 1,
+          "name": "Коробка",
+          "slug": "transmission",
+          "values": [
+            {"id": 0, "value": "Ручная"},
+            {"id": 1, "value": "Автомат"}
+          ]
+        }
+      ]
     },
     {
       "id": 3,
@@ -50,7 +100,16 @@
         "code": "RUR",
         "default": "true"
       },
-      "traits": []
+      "traits": [
+        {
+          "id": 3,
+          "name": "Мощность",
+          "slug": "engine_power",
+          "values": [
+            {"id": 0, "value": "640"}
+          ]
+        }
+      ]
     },
     {
       "id": 4,
@@ -63,7 +122,17 @@
         "code": "RUR",
         "default": "true"
       },
-      "traits": []
+      "traits": [
+        {
+          "id": 4,
+          "name": "Топливо",
+          "slug": "fuel",
+          "values": [
+            {"id": 0, "value": "Бензин"},
+            {"id": 1, "value": "Дизель"}
+          ]
+        }
+      ]
     },
     {
       "id": 5,
@@ -76,7 +145,33 @@
         "code": "RUR",
         "default": "true"
       },
-      "traits": []
+      "traits": [
+        {
+          "id": 0,
+          "name": "Цвет",
+          "slug": "color",
+          "values": [
+            {"id": 4, "value": "Синий"}
+          ]
+        },
+        {
+          "id": 1,
+          "name": "Коробка",
+          "slug": "transmission",
+          "values": [
+            {"id": 0, "value": "Ручная"},
+            {"id": 1, "value": "Автомат"}
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Объем двигателя",
+          "slug": "engine_capacity",
+          "values": [
+            {"id": 2, "value": "7.2"}
+          ]
+        }
+      ]
     },
     {
       "id": 6,
@@ -89,7 +184,47 @@
         "code": "RUR",
         "default": "true"
       },
-      "traits": []
+      "traits": [
+        {
+          "id": 2,
+          "name": "Объем двигателя",
+          "slug": "engine_capacity",
+          "values": [
+            {"id": 0, "value": "8.4"},
+            {"id": 1, "value": "6"},
+            {"id": 2, "value": "7.2"},
+            {"id": 3, "value": "4.2"},
+            {"id": 4, "value": "5.2"},
+            {"id": 5, "value": "3.8"}
+          ]
+        },
+        {
+          "id": 3,
+          "name": "Мощность",
+          "slug": "engine_power",
+          "values": [
+            {"id": 3, "value": "300"},
+            {"id": 4, "value": "400"},
+            {"id": 5, "value": "610"}
+          ]
+        },
+        {
+          "id": 4,
+          "name": "Топливо",
+          "slug": "fuel",
+          "values": [
+            {"id": 1, "value": "Дизель"}
+          ]
+        },
+        {
+          "id": 5,
+          "name": "Привод",
+          "slug": "automobile_layout",
+          "values": [
+            {"id": 1, "value": "Передний"}
+          ]
+        }
+      ]
     },
     {
       "id": 7,
@@ -102,7 +237,16 @@
         "code": "RUR",
         "default": "true"
       },
-      "traits": []
+      "traits": [
+        {
+          "id": 3,
+          "name": "Мощность",
+          "slug": "engine_power",
+          "values": [
+            {"id": 5, "value": "610"}
+          ]
+        }
+      ]
     },
     {
       "id": 8,
@@ -141,7 +285,33 @@
         "code": "RUR",
         "default": "true"
       },
-      "traits": []
+      "traits": [
+        {
+          "id": 0,
+          "name": "Цвет",
+          "slug": "color",
+          "values": [
+            {"id": 0, "value": "Красный"}
+          ]
+        },
+        {
+          "id": 1,
+          "name": "Коробка",
+          "slug": "transmission",
+          "values": [
+            {"id": 0, "value": "Ручная"},
+            {"id": 1, "value": "Автомат"}
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Объем двигателя",
+          "slug": "engine_capacity",
+          "values": [
+            {"id": 1, "value": "6"}
+          ]
+        }
+      ]
     },
     {
       "id": 11,
@@ -154,7 +324,59 @@
         "code": "RUR",
         "default": "true"
       },
-      "traits": []
+      "traits": [
+        {
+          "id": 0,
+          "name": "Цвет",
+          "slug": "color",
+          "values": [
+            {"id": 0, "value": "Красный"},
+            {"id": 1, "value": "Черный"},
+            {"id": 4, "value": "Синий"}
+          ]
+        },
+        {
+          "id": 1,
+          "name": "Коробка",
+          "slug": "transmission",
+          "values": [
+            {"id": 0, "value": "Ручная"},
+            {"id": 1, "value": "Автомат"}
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Объем двигателя",
+          "slug": "engine_capacity",
+          "values": [
+            {"id": 5, "value": "3.8"}
+          ]
+        },
+        {
+          "id": 3,
+          "name": "Мощность",
+          "slug": "engine_power",
+          "values": [
+            {"id": 0, "value": "640"}
+          ]
+        },
+        {
+          "id": 4,
+          "name": "Топливо",
+          "slug": "fuel",
+          "values": [
+            {"id": 0, "value": "Бензин"}
+          ]
+        },
+        {
+          "id": 5,
+          "name": "Привод",
+          "slug": "automobile_layout",
+          "values": [
+            {"id": 0, "value": "Задний"}
+          ]
+        }
+      ]
     },
     {
       "id": 12,
@@ -167,7 +389,24 @@
         "code": "RUR",
         "default": "true"
       },
-      "traits": []
+      "traits": [
+        {
+          "id": 1,
+          "name": "Коробка",
+          "slug": "transmission",
+          "values": [
+            {"id": 1, "value": "Автомат"}
+          ]
+        },
+        {
+          "id": 4,
+          "name": "Топливо",
+          "slug": "fuel",
+          "values": [
+            {"id": 1, "value": "Дизель"}
+          ]
+        }
+      ]
     },
     {
       "id": 13,
@@ -180,7 +419,16 @@
         "code": "RUR",
         "default": "true"
       },
-      "traits": []
+      "traits": [
+        {
+          "id": 2,
+          "name": "Объем двигателя",
+          "slug": "engine_capacity",
+          "values": [
+            {"id": 4, "value": "5.2"}
+          ]
+        }
+      ]
     },
     {
       "id": 14,
@@ -193,7 +441,20 @@
         "code": "RUR",
         "default": "true"
       },
-      "traits": []
+      "traits": [
+        {
+          "id": 0,
+          "name": "Цвет",
+          "slug": "color",
+          "values": [
+            {"id": 0, "value": "Красный"},
+            {"id": 1, "value": "Черный"},
+            {"id": 2, "value": "Зеленый"},
+            {"id": 3, "value": "Желтый"},
+            {"id": 4, "value": "Синий"}
+          ]
+        }
+      ]
     },
     {
       "id": 15,
@@ -206,7 +467,32 @@
         "code": "RUR",
         "default": "true"
       },
-      "traits": []
+      "traits": [
+        {
+          "id": 3,
+          "name": "Мощность",
+          "slug": "engine_power",
+          "values": [
+            {"id": 4, "value": "400"}
+          ]
+        },
+        {
+          "id": 4,
+          "name": "Топливо",
+          "slug": "fuel",
+          "values": [
+            {"id": 0, "value": "Бензин"}
+          ]
+        },
+        {
+          "id": 5,
+          "name": "Привод",
+          "slug": "automobile_layout",
+          "values": [
+            {"id": 0, "value": "Задний"}
+          ]
+        }
+      ]
     },
     {
       "id": 16,
@@ -219,7 +505,33 @@
         "code": "RUR",
         "default": "true"
       },
-      "traits": []
+      "traits": [
+        {
+          "id": 0,
+          "name": "Цвет",
+          "slug": "color",
+          "values": [
+            {"id": 0, "value": "Красный"},
+            {"id": 1, "value": "Черный"}
+          ]
+        },
+        {
+          "id": 1,
+          "name": "Коробка",
+          "slug": "transmission",
+          "values": [
+            {"id": 0, "value": "Ручная"}
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Объем двигателя",
+          "slug": "engine_capacity",
+          "values": [
+            {"id": 1, "value": "6"}
+          ]
+        }
+      ]
     },
     {
       "id": 17,
@@ -232,7 +544,56 @@
         "code": "RUR",
         "default": "true"
       },
-      "traits": []
+      "traits": [
+        {
+          "id": 0,
+          "name": "Цвет",
+          "slug": "color",
+          "values": [
+            {"id": 1, "value": "Черный"}
+          ]
+        },
+        {
+          "id": 1,
+          "name": "Коробка",
+          "slug": "transmission",
+          "values": [
+            {"id": 1, "value": "Автомат"}
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Объем двигателя",
+          "slug": "engine_capacity",
+          "values": [
+            {"id": 2, "value": "7.2"}
+          ]
+        },
+        {
+          "id": 3,
+          "name": "Мощность",
+          "slug": "engine_power",
+          "values": [
+            {"id": 2, "value": "375"}
+          ]
+        },
+        {
+          "id": 4,
+          "name": "Топливо",
+          "slug": "fuel",
+          "values": [
+            {"id": 0, "value": "Бензин"}
+          ]
+        },
+        {
+          "id": 5,
+          "name": "Привод",
+          "slug": "automobile_layout",
+          "values": [
+            {"id": 0, "value": "Задний"}
+          ]
+        }
+      ]
     },
     {
       "id": 18,
@@ -245,7 +606,33 @@
         "code": "RUR",
         "default": "true"
       },
-      "traits": []
+      "traits": [
+        {
+          "id": 0,
+          "name": "Цвет",
+          "slug": "color",
+          "values": [
+            {"id": 0, "value": "Красный"},
+            {"id": 1, "value": "Черный"}
+          ]
+        },
+        {
+          "id": 1,
+          "name": "Коробка",
+          "slug": "transmission",
+          "values": [
+            {"id": 0, "value": "Ручная"}
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Объем двигателя",
+          "slug": "engine_capacity",
+          "values": [
+            {"id": 0, "value": "8.4"}
+          ]
+        }
+      ]
     },
     {
       "id": 19,
@@ -258,7 +645,40 @@
         "code": "RUR",
         "default": "true"
       },
-      "traits": []
+      "traits": [
+        {
+          "id": 0,
+          "name": "Цвет",
+          "slug": "color",
+          "values": [
+            {"id": 3, "value": "Желтый"}
+          ]
+        },
+        {
+          "id": 1,
+          "name": "Коробка",
+          "slug": "transmission",
+          "values": [
+            {"id": 0, "value": "Ручная"}
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Объем двигателя",
+          "slug": "engine_capacity",
+          "values": [
+            {"id": 1, "value": "6"}
+          ]
+        },
+        {
+          "id": 3,
+          "name": "Мощность",
+          "slug": "engine_power",
+          "values": [
+            {"id": 1, "value": "550"}
+          ]
+        }
+      ]
     }
   ]
 }

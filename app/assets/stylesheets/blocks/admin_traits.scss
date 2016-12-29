@@ -1,0 +1,19 @@
+.traits-wrapper {
+  form { width: 600px; margin: 0 auto; }
+  .trait-row {
+    line-height: 1.3; margin-bottom: 10px; font-size: 16px; position: relative;
+    input { border: 1px solid #333; padding: 5px 10px; width: 220px; }
+    label { width: 60px; display: inline-block; }
+  }
+  .trait-value {
+    position: relative; margin-bottom: 5px;
+    &:only-child .delete-button { display: none; }
+  }
+  .delete-button { position: absolute; right: 0; top: 5px; z-index: 1; cursor: pointer; }
+  .submit-block {
+    margin: 20px 0;
+    input { font-size: 20px; line-height: 1.2; padding: 10px 20px; cursor: pointer; }
+  }
+  .assign-products { position: absolute; left: 0; top: 5px; cursor: pointer; border-bottom: 1px dashed #333; transform: translate(-120%, 0); }
+  .dashed-link { border-bottom: 1px dashed #333; display: inline-block; cursor: pointer; }
+}

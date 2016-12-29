@@ -1,9 +1,10 @@
 * { box-sizing: border-box; }
 
 .main-title {
-  height: 150px; margin: 0 auto; width: 960px; text-align: center;
+  height: 150px; margin: 0 auto; width: 1260px; text-align: center;
   h1 { font-size: 34px; line-height: 150px; }
 }
-.main { background: #fff; margin: 0 auto; width: 960px; min-height: 500px; }
+.main { background: #fff; margin: 0 auto; width: 1260px; font-family: Tahoma, Geneva, sans-serif; }
 
-h3 { font-size: 24px; height: 40px; line-height: 40px; color: #333; text-transform: uppercase; }
+h2 { font-size: 24px; height: 40px; line-height: 40px; color: #333; text-transform: uppercase; }
+.mb-5 { margin-bottom: 5px; }

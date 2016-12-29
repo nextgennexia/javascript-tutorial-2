@@ -16,14 +16,22 @@ app.modules.init = ((self) => {
     $('.js-title-example').html(titleTemplate({title: 'Javascript tutorial part 2'}));
   }
 
+  function _getProducts() {
+    _api({url: '/api/products'}).then((response) => { app.config.products = response; });
+  }
+
+  function _getTraits() {
+    _api({url: '/api/traits'}).then((response) => { app.config.traits = response; });
+  }
+
   function _init() {
+    _getProducts();
+    _getTraits();
     _handlebarsExampleOfUsage(); // Метод, показываеющий как работать с handlebars-loader
   }
 
   self.ready = () => {
     _init();
-    _api({url: '/api/products/1', data: {traits: [1,2,3]}, method: 'PUT'}).then((response) => { console.log(response); });
-
   };
 
   return self;

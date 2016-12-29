@@ -1,0 +1,8 @@
+.ui-widget-overlay { width: 100%; height: 100%; position: fixed; left: 0; top: 0; z-index: 1; background: rgba(0,0,0,.6); }
+.ui-dialog {
+  background: #fff; z-index: 2; overflow: hidden;
+  .ui-dialog-titlebar { overflow: hidden; }
+  .ui-dialog-title { display: none; }
+  .ui-dialog-titlebar-close { float: right; background: #fff; border: 0; outline: none; cursor: pointer; }
+  .ui-dialog-buttonpane { padding: 0 0 10px; }
+}
