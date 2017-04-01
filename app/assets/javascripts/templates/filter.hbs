@@ -1,0 +1,17 @@
+{{#each data}}
+<div class="filter-block" data-id="{{this.id}}">
+    <div class="filter-title">
+        {{this.name}}
+    </div>
+    <div class="filter-values">
+        {{#each this.values}}
+        <div>
+            <label>
+                <input name="{{../this.slug}}" class="js-catalogue-filter" type="checkbox" value="{{this.id}}">
+                {{this.value}}
+            </label>
+        </div>
+        {{/each}}
+    </div>
+</div>
+{{/each}}

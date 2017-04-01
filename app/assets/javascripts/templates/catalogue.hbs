@@ -1,0 +1,10 @@
+{{#each data}}
+<div class="catalogue-item" data-id="{{this.id}}">
+    <div class="image-wrapper">
+        <img src="{{this.image}}">
+    </div>
+    <div class="title">{{this.name}}</div>
+    <div class="assign-traits-link"><span>Привязать характеристики</span></div>
+    <div class="price">{{this.price}} р.</div>
+</div>
+{{/each}}

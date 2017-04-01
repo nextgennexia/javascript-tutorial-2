@@ -1,0 +1,17 @@
+<form action="/" class="js-products-assignation" data-id="{{traitId}}">
+    {{#each products}}
+    <div class="product-row">
+        <label>
+            {{#if this.checked}}
+            <input type="checkbox" name="id" value="{{this.id}}" checked="checked">
+            {{else}}
+            <input type="checkbox" name="id" value="{{this.id}}">
+            {{/if}}
+            {{this.name}}
+        </label>
+    </div>
+    {{/each}}
+    <div class="submit-block">
+        <input type="submit" value="Save">
+    </div>
+</form>
