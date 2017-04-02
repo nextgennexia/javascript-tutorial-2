@@ -14,7 +14,7 @@ app.modules.traits = (function(self) {
     $('.js-traits-wrapper').html(template(app.config.traits));
   }
 
-  function _renderAllowedProducts(id) {
+  function _renderAssignedProducts(id) {
     const template = require('../templates/products_assignation.hbs');
 
     _$assignProductsPopup.html(template({
@@ -45,8 +45,9 @@ app.modules.traits = (function(self) {
       valuesLastIndex;
 
     $form.serializeArray().forEach(function(item) {
-      var compositeAttr = item.name.replace(']', '').split('[');//стрем
+      var compositeAttr = item.name.split(/[[\]]{1,2}/);
 
+      compositeAttr.length--; //последний элемент фиктивный, не нужен
       if (item.name === 'id') {
         data.push({});
         dataLastIndex = data.length - 1;
@@ -149,7 +150,7 @@ app.modules.traits = (function(self) {
         $(this).before(template());
       })
       .on('click', '.js-assign-products', function() {
-        _renderAllowedProducts(Number($(this).closest('.js-trait-row').find('.js-trait-id').val()));
+        _renderAssignedProducts(Number($(this).closest('.js-trait-row').find('.js-trait-id').val()));
       });
   }
 
