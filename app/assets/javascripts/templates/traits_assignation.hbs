@@ -1,0 +1,34 @@
+<form action="/" class="js-traits-assignation" data-id="{{productId}}">
+    {{#if traits.length}}
+    {{#each traits}}
+    <div class="trait-block">
+        <input type="hidden" name="id" value="{{this.id}}">
+        <input type="hidden" name="name" value="{{this.name}}">
+        <input type="hidden" name="slug" value="{{this.slug}}">
+        <div class="trait-title">
+            {{this.name}}
+        </div>
+        <div class="trait-values">
+            {{#each this.values}}
+                <div>
+                    <label>
+                        {{#if this.checked}}
+                        <input name="values[id]" type="checkbox" value="{{this.id}}" checked="checked">
+                        {{else}}
+                        <input name="values[id]" type="checkbox" value="{{this.id}}">
+                        {{/if}}
+                        <input name="values[value]" type="hidden" value="{{this.value}}">
+                        {{this.value}}
+                    </label>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+    {{/each}}
+    <div class="submit-block">
+        <input type="submit" value="Save">
+    </div>
+    {{else}}
+    <div>Характеристики не привязаны</div><a href="/admin/traits">Перейти к администрированию характеристик</a>
+    {{/if}}
+</form>

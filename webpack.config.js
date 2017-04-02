@@ -36,7 +36,7 @@ module.exports = {
 
         item = Object.assign(item, data);
 
-        if (item.values.length === data.values.length)
+        if (item.traits.length === data.traits.length)
 
         _saveToFile('products');
         return item;

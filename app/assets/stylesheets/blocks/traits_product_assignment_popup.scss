@@ -1,4 +1,13 @@
-.products-assignment-popup {
+.products-assignment-popup,
+.traits-assignment-popup {
   padding: 20px; width: 400px !important;
   .product-row { font-size: 20px; line-height: 1.2; margin-bottom: 10px; }
+}
+
+.traits-assignment-popup .trait-block {
+  .trait-title { font-size: 18px; line-height: 1.5; border-bottom: 1px solid #333; }
+  .trait-values {
+    margin: 10px 0 20px;
+    & > div { line-height: 1.4; font-size: 16px; }
+  }
 }
