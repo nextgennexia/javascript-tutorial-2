@@ -46,8 +46,9 @@ app.modules.traits = (function(self) {
 
     //стремная сериализация. Лучше пока не придумал
     $form.serializeArray().forEach(function(item) {
-      var compositeAttr = item.name.replace(']', '').split('[');
+      var compositeAttr = item.name.split(/[[\]]{1,2}/);
 
+      compositeAttr.length--; //последний элемент фиктивный, не нужен
       if (item.name === 'id') {
         data.push({});
         dataLastIndex = data.length - 1;

@@ -55,7 +55,8 @@ app.modules.catalogue = (function(self) {
   function _getAssignedTraits(id) {
     var
       traits = [],
-      product;
+      product,
+      currentProductTrait;
 
     product = app.config.products.data.find(function (product) {
       return product.id === id;
@@ -66,14 +67,14 @@ app.modules.catalogue = (function(self) {
     });
 
     traits.forEach(function(trait) {
-      product.traits.forEach(function(productTrait) {
-        if (productTrait.id === trait.id) {
-          trait.values.forEach(function(value) {
-            productTrait.values.forEach(function(productTraitValue) {
-              value.checked = value.id === productTraitValue.id;
-            });
-          });
-        }
+      currentProductTrait = product.traits.find(function(productTrait) {
+        return Number(productTrait.id) === trait.id;
+      });
+
+      trait.values.some(function(value) {
+        currentProductTrait.values.forEach(function(productTraitValue) {
+          value.checked = value.id === productTraitValue.id;
+        });
       });
     });
 
@@ -109,10 +110,10 @@ app.modules.catalogue = (function(self) {
       dataLastIndex,
       valuesLastIndex;
 
-    //стремная сериализация. Лучше пока не придумал
     $form.serializeArray().forEach(function(item) {
-      var compositeAttr = item.name.replace(']', '').split('[');
+      var compositeAttr = item.name.split(/[[\]]{1,2}/);
 
+      compositeAttr.length--; //последний элемент фиктивный, не нужен
       if (item.name === 'id') {
         data.push({});
         dataLastIndex = data.length - 1;
