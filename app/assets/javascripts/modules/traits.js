@@ -1,17 +1,17 @@
 app.modules.traits = (function(self) {
   var
     _$assignProductsPopup = $('.js-popup-wrapper'),
-    _oldAssignedProducts,
-    _newAssignedProducts;
+    _traits, _oldAssignedProducts, _newAssignedProducts;
 
   function _init() {
+    _traits = app.config.traits.data;
     _renderTraits();
   }
 
   function _renderTraits() {
     const template = require('../templates/traits_form.hbs');
 
-    $('.js-traits-wrapper').html(template(app.config.traits));
+    $('.js-traits-wrapper').html(template({data: _traits}));
   }
 
   function _renderAssignedProducts(id) {
@@ -44,7 +44,6 @@ app.modules.traits = (function(self) {
       dataLastIndex,
       valuesLastIndex;
 
-    //стремная сериализация. Лучше пока не придумал
     $form.serializeArray().forEach(function(item) {
       var compositeAttr = item.name.split(/[[\]]{1,2}/);
 
@@ -61,9 +60,9 @@ app.modules.traits = (function(self) {
           data[dataLastIndex][compositeAttr[0]].push({});
           valuesLastIndex = data[dataLastIndex][compositeAttr[0]].length - 1;
         }
-        data[dataLastIndex][compositeAttr[0]][valuesLastIndex][compositeAttr[1]] = item.value;
+        data[dataLastIndex][compositeAttr[0]][valuesLastIndex][compositeAttr[1]] = compositeAttr[1] === 'id' ? Number(item.value) : item.value;
       } else {
-        data[dataLastIndex][item.name] = item.value;
+        data[dataLastIndex][item.name] = item.name === 'id' ? Number(item.value) : item.value;
       }
     });
 
@@ -71,14 +70,20 @@ app.modules.traits = (function(self) {
   }
 
   function _getLightProducts(id) {
+    var trait = _findTrait(id);
+
     return app.config.products.data.map(function(product) {
       return {
         id: product.id,
         name: product.name,
-        checked: product.traits.some(function(trait) {
-          return trait.id === id;
-        })
+        checked: trait['allowed_products'].includes(product.id)
       }
+    });
+  }
+
+  function _findTrait(id) {
+    return _traits.find(function(trait) {
+      return trait.id === id;
     });
   }
 
@@ -89,17 +94,29 @@ app.modules.traits = (function(self) {
   function _saveForm(form) {
     var $form = $(form);
 
+    _traits.forEach(function(trait, index) {
+      var newTrait = _serializeData($form).find(function(item) { return item.id === trait.id; });
+
+      if (newTrait && newTrait.values) {
+        trait.name = newTrait.name;
+        trait.slug = newTrait.slug;
+        trait.values = newTrait.values;
+      } else {
+        _traits.splice(index, 1);
+      }
+    });
+
     _api({
       url: '/api/traits',
       method: 'POST',
-      data: JSON.stringify(_serializeData($form))
+      data: JSON.stringify(_traits)
     });
   }
 
   function _saveProductsAssignation(traitId) {
-    var assignments, trait;
-
-    trait = app.config.traits.data.find(function(trait) { return Number(trait.id) === traitId; });
+    var
+      assignments,
+      trait = _findTrait(traitId);
 
     _oldAssignedProducts = trait['allowed_products'];
 
@@ -109,11 +126,11 @@ app.modules.traits = (function(self) {
     };
 
     assignments.markedForDelete.forEach(function(id) {
-      _api({url: '/api/traits/' + traitId + '/products/' + id, method: 'DELETE'}).then(function(response) { trait = response; });
+      _api({url: '/api/traits/' + traitId + '/products/' + id, method: 'DELETE'}).then(function(response) { $.extend(trait, response); });
     });
 
     assignments.markedForPost.forEach(function(id) {
-      _api({url: '/api/traits/' + traitId + '/products/' + id, method: 'POST'}).then(function(response) { trait = response; });
+      _api({url: '/api/traits/' + traitId + '/products/' + id, method: 'POST'}).then(function(response) { $.extend(trait, response); });
     });
 
     _$assignProductsPopup.dialog('close');

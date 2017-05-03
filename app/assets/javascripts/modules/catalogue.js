@@ -55,8 +55,7 @@ app.modules.catalogue = (function(self) {
   function _getAssignedTraits(id) {
     var
       traits = [],
-      product,
-      currentProductTrait;
+      product;
 
     product = app.config.products.data.find(function (product) {
       return product.id === id;
@@ -67,14 +66,21 @@ app.modules.catalogue = (function(self) {
     });
 
     traits.forEach(function(trait) {
-      currentProductTrait = product.traits.find(function(productTrait) {
-        return Number(productTrait.id) === trait.id;
+      var currentProductTrait = product.traits.find(function(productTrait) {
+        trait.id = Number(trait.id);
+        productTrait.id = Number(productTrait.id);
+
+        return productTrait.id === trait.id;
       });
 
-      trait.values.some(function(value) {
-        currentProductTrait.values.forEach(function(productTraitValue) {
-          value.checked = value.id === productTraitValue.id;
+      trait.values.forEach(function(value) {
+        var hasChecked = currentProductTrait.values.some(function(productTraitValue) {
+          productTraitValue.id = Number(productTraitValue.id);
+          value.id = Number(value.id);
+
+          return value.id === productTraitValue.id;
         });
+        value.checked = hasChecked;
       });
     });
 
@@ -126,11 +132,9 @@ app.modules.catalogue = (function(self) {
           data[dataLastIndex][compositeAttr[0]].push({});
           valuesLastIndex = data[dataLastIndex][compositeAttr[0]].length - 1;
         }
-        if (!data[dataLastIndex][compositeAttr[0]][valuesLastIndex][compositeAttr[1]]) {
-          data[dataLastIndex][compositeAttr[0]][valuesLastIndex][compositeAttr[1]] = item.value;
-        }
+        data[dataLastIndex][compositeAttr[0]][valuesLastIndex][compositeAttr[1]] = compositeAttr[1] === 'id' ? Number(item.value) : item.value;
       } else {
-        data[dataLastIndex][item.name] = item.value;
+        data[dataLastIndex][item.name] = item.name === 'id' ? Number(item.value) : item.value;
       }
     });
 
@@ -145,11 +149,14 @@ app.modules.catalogue = (function(self) {
     });
 
     product.traits = traits;
+
     _api({
       url: '/api/products/' + productId,
       method: 'PUT',
       data: JSON.stringify(product)
     }).then(function(response) { product = response; });
+
+    _$assignTraitsPopup.dialog('close');
   }
 
   function _listener() {
