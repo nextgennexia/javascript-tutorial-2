@@ -12,12 +12,13 @@
             {{#each this.values}}
                 <div>
                     <label>
-                        {{#if this.checked}}
-                        <input name="values[id]" type="checkbox" value="{{this.id}}" checked="checked">
-                        {{else}}
-                        <input name="values[id]" type="checkbox" value="{{this.id}}">
-                        {{/if}}
+                        <input name="values[id]" type="hidden" value="{{this.id}}">
                         <input name="values[value]" type="hidden" value="{{this.value}}">
+                        {{#if this.checked}}
+                        <input name="values[checked]" type="checkbox" value="1" checked="checked">
+                        {{else}}
+                        <input name="values[checked]" type="checkbox" value="0">
+                        {{/if}}
                         {{this.value}}
                     </label>
                 </div>

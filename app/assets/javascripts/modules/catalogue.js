@@ -148,7 +148,13 @@ app.modules.catalogue = (function(self) {
       return product.id === productId;
     });
 
-    product.traits = traits;
+    product.traits = traits.map(function(trait) {
+      trait.values = trait.values.filter(function(value) {
+        return value['checked'];
+      });
+
+      return trait;
+    });
 
     _api({
       url: '/api/products/' + productId,
